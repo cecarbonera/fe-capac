@@ -42,11 +42,11 @@ const Empregados = () => {
   //Leitura/Atualização dados
   useEffect(() => {
     Consultar();
-  }, []);
+  }, [emps]);
 
   //Arrow function
   const ExcluirEmpregado = (empid) => {
-    if (window.confirm("Deseja excluir o empregado ?")) {
+    if (window.confirm("Deseja excluir o empregado "+ empid+ " ?")) {
       apiAxios.delete("Empregados/Excluir/" + empid).catch((error) => {
         alert(error);
       });

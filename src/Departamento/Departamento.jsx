@@ -30,7 +30,8 @@ const Departamento = () => {
   //Leitura/Atualização dos dados
   useEffect(() => {
     Consultar();
-  }, []);
+
+  }, [deps]);
 
   const ExcluirDepartamento = (depid) => {
     if (window.confirm("Deseja excluir o departamento " + depid + " ?")) {
@@ -42,7 +43,7 @@ const Departamento = () => {
 
   return (
     <div>
-      <Table className="mt-4" striped bordered hover size="sm">
+      <Table className='mt-4' striped bordered hover size='sm'>
         <thead>
           <tr>
             <th>Departamento</th>
@@ -58,15 +59,15 @@ const Departamento = () => {
               <td>
                 <ButtonToolbar>
                   <Button
-                    className="mr-2"
-                    variant="info"
+                    className='mr-2'
+                    variant='info'
                     onClick={() => setarValores(dep)}
                   >
                     Editar
                   </Button>
                   <Button
-                    className="mr-2"
-                    variant="danger"
+                    className='mr-2'
+                    variant='danger'
                     onClick={() => ExcluirDepartamento(dep.Codigo)}
                   >
                     Excluir
@@ -84,7 +85,7 @@ const Departamento = () => {
         </tbody>
       </Table>
       <ButtonToolbar>
-        <Button variant="primary" onClick={() => setModalAddShow(true)}>
+        <Button variant='primary' onClick={() => setModalAddShow(true)}>
           Novo Departamento
         </Button>
         <AddDepModal
