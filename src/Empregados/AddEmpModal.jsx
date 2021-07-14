@@ -56,8 +56,6 @@ const AddEmpModal = (props) => {
       apiAxios
         .post("Empregados/SalvarArquivo", formData, config)
         .then((result) => {
-          debugger;
-
           setImagesrc(process.env.REACT_APP_PHOTO_PATH + result.data);
         })
         .catch((error) => {

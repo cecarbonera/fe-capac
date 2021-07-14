@@ -2,12 +2,11 @@ import axios from "axios";
 import { trackPromise } from "react-promise-tracker";
 
 const Register = async (usuario, senha, regra, email) => {
-  debugger;
   const dados = {
     Id: 0,
     Usuario: usuario,
     Senha: senha,
-    Regra: (regra === '' || regra === null ? "F" : regra),
+    Regra: regra === "" || regra === null ? "F" : regra,
     Email: email,
   };
 
@@ -25,6 +24,7 @@ const Login = async (usuario, senha) => {
     const response = await axios.get(
       `${process.env.REACT_APP_API}Usuarios/Login/${usuario}/${senha}`
     );
+
     if (response.data) {
       localStorage.setItem("user", JSON.stringify(response.data));
     }
