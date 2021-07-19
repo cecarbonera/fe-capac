@@ -6,7 +6,6 @@ import "./App.css";
 import AuthService from "../src/Services/authservice";
 import Login from "./Components/Login";
 import Register from "./Components/Register";
-import Home from "./Components/Home";
 import Profile from "./Components/Profile";
 import BoardUser from "./Components/BoardUser";
 import Empregados from "../src/Empregados/Empregados";
@@ -30,10 +29,7 @@ const App = () => {
   return (
     <div>
       <nav className="navbar navbar-expand navbar-dark bg-dark">        
-        <div className="navbar-nav mr-auto">
-          <li className="nav-item">
-            <Link to={"/home"} className="nav-link">Home</Link>
-          </li>
+        <div className="navbar-nav mr-auto">          
           <li className="nav-item">
             <Link to={"/departamento"} className="nav-link">Departamentos</Link>
           </li>
@@ -75,7 +71,6 @@ const App = () => {
       </nav>
       <div className="container mt-3">
         <Switch>
-          <Route exact path={["/", "/home"]} component={Home} />
           <Route exact path="/login" component={Login} />
           <Route exact path="/register" component={Register} />
           <Route exact path="/profile" component={Profile} />

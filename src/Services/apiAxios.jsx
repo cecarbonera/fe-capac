@@ -15,12 +15,8 @@ apiAxios.interceptors.request.use(
                 config.headers =
                 {
                     'Authorization': `Bearer ${user.acessToken}`,
-                    //'Accept': 'application/json',                    
-                    //'Content-Type': 'application/x-www-form-urlencoded'
                 }
-
             }
-
             return config;
 
         }

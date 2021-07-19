@@ -7,7 +7,7 @@ const Profile = () => {
   return (
     <div className="container">
       <header className="jumbotron">
-        <h3>Profile</h3>
+        <h3>Dados do Usuário</h3>
       </header>
       <p>
         <strong>Usuário:</strong> {currentUser.usuario[0].Usuario}
