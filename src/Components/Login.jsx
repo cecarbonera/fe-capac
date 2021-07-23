@@ -6,11 +6,11 @@ import { Formik } from "formik";
 import * as Yup from "yup";
 
 const Login = (props) => {  
-  //******
+  //****** 
   //****** OBSERVAÇÂO: QUANDO O YUP NAO FUNCIONAR, DEVE-SE VALIDAR OS CAMPOS, POIS SE ALGUM CAMPO ESTÁ DECLARADO E
   //****** NAO FOR USADO, A APLICACAO NAO FAZ O SUBMIT
   //******
-  //Validação Yup
+  //Validação Yup - Campos Tela
   const camposLogin = Yup.object({
     username: Yup.string().required("Usuário inválido"),
     password: Yup.string().required("Senha inválida"),
