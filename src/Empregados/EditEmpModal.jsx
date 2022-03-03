@@ -31,7 +31,7 @@ function EditEmpModal(props) {
       process.env.REACT_APP_PHOTO_PATH +
         (props.Foto === "" ? "anonimo.jpg" : props.Foto)
     );
-  }, [props.Codigo]);
+  }, [props]);
 
   const handleForm = async (values) => {
     const dados = {

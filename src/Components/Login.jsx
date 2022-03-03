@@ -1,4 +1,4 @@
-import React, { useState, useRef } from "react";
+import React from "react";
 import Form from "react-validation/build/form";
 import Input from "react-validation/build/input";
 import AuthService from "../Services/authservice";
@@ -77,9 +77,7 @@ const Login = (props) => {
                   value={values.username}
                   onChange={handleChange}
                   onBlur={handleBlur}
-                  className={
-                    touched.username && errors.username ? "error" : null
-                  }
+                  className={ touched.username && errors.username ? "error" : null }
                 />
                 {touched.username && errors.username ? (
                   <div className='error-message'>{errors.username}</div>
@@ -94,9 +92,7 @@ const Login = (props) => {
                   value={values.password}
                   onChange={handleChange}
                   onBlur={handleBlur}
-                  className={
-                    touched.password && errors.password ? "error" : null
-                  }
+                  className={ touched.password && errors.password ? "error" : null }
                 />
                 {touched.password && errors.password ? (
                   <div className='error-message'>{errors.password}</div>
