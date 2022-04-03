@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useCallback } from "react";
+import React, { useState, useEffect } from "react";
 import { Table, Button, ButtonToolbar } from "react-bootstrap";
 import AddEmpModal from "./AddEmpModal";
 import EditEmpModal from "./EditEmpModal";
@@ -40,7 +40,7 @@ const Empregados = () => {
 
 	useEffect(() => {
 		Consultar();
-	}, [emps]);
+	}, [modalShow, modalAddShow]);
 
 	//Arrow function
 	const ExcluirEmpregado = async (empid) => {
@@ -93,7 +93,6 @@ const Empregados = () => {
 										show={modalShow}
 										onHide={() => {
 											setModalShow(false);
-											Consultar();
 										}}
 										Codigo={dados.codigo}
 										Nome={dados.nome}
